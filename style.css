@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --background: linear-gradient(45deg, #d2001a, #7462ff, #23d5ab);
+  --light: #f4f8fe;
+  --dark: #050b14;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--dark);
+  animation: 0.4s ease-in-out;
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  height: 45vh;
+  width: 100%;
+  background: var(--background);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
+}
+
+.container {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile {
+  position: relative;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid transparent;
+  background: var(--background);
+  background-size: 300% 300%;
+  animation: color 18s ease-in-out infinite;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mode */
+.mode {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--light);
+  font-size: 1rem;
+  background-color: #141414;
+  color: var(--light);
+  bottom: 2.8rem;
+  left: 43rem;
+}
+
+.mode:hover {
+  cursor: pointer;
+}
+
+/* Intro */
+.intro {
+  margin-top: -1.3rem;
+}
+
+.intro .quotes {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--light);
+}
+
+.quotes {
+  font-family: "Lato", sans-serif;
+  color: var(--light);
+}
+
+.sosmed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -0.8rem;
+}
+
+.intro .info-sosmed {
+  margin-right: 1rem;
+}
+
+.info-sosmed button {
+  font-size: 0.8rem;
+  padding: 1px 10px;
+}
+
+.info-sosmed button i {
+  margin-right: 5px;
+}
+
+/* Content */
+.content {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.main-content {
+  margin-bottom: 1.4rem;
+}
+
+.main-content a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .mode {
+    bottom: 2.5rem;
+    left: 54%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mode {
+    bottom: 2.5rem;
+    left: 57%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .mode {
+    bottom: 2.5rem;
+    left: 59%;
+  }
+
+  .container {
+    top: 57%;
+  }
+}
+
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.effect {
+  transition: all 1s ease;
+}
+
+.active {
+  background-color: var(--light);
+
+  button {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+
+  button:hover {
+    background-color: #000000c2;
+    color: var(--light);
+  }
+
+  .quotes {
+    color: var(--dark);
+  }
+}
