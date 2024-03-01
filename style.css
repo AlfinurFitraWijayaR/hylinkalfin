@@ -16,7 +16,7 @@ body {
   font-family: "Lato", sans-serif;
   background-color: var(--dark);
   animation: 0.4s ease-in-out;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .header {
